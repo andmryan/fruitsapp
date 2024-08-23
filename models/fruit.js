@@ -9,7 +9,8 @@ const mongoose = require('./connection');
 const FruitSchema = new mongoose.Schema({
     name: String,
     readyToEat: Boolean,
-    color: String
+    color: String,
+    username: String,
 });
 
 //variable that holds the configs and the schema
