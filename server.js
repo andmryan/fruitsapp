@@ -22,7 +22,7 @@ app.use(methodOverride('_method')); //looks for the request's query parameter wi
 // app.use(express.json());// only use this if we are doing postman's body -> raw -> JSON 
 app.use(express.urlencoded({ extended: true })); // parse urlencoded requests. reads form data
 app.use(session({
-    secret: process.env.secret,
+    secret: process.env.SECRET,
     store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
     saveUninitialized: true,
     resave: false,
